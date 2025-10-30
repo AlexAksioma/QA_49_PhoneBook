@@ -23,6 +23,9 @@ public class ContactsPage extends BasePage{
     @FindBy(className = "contact-item_card__2SOIM")
     List<WebElement> contactsList;
 
+    @FindBy(xpath = "//div[@class='contact-page_leftdiv__yhyke']/div/div[last()]/h2")
+    WebElement lastElementList;
+
     public boolean isTextContactsPresent(String text){
         return isTextInElementPresent(btnContactsHeader, text);
     }
@@ -51,4 +54,7 @@ public class ContactsPage extends BasePage{
     }
 
 
+    public void clickLastContact() {
+        lastElementList.click();
+    }
 }

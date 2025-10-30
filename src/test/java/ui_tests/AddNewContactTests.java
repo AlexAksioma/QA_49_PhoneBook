@@ -40,6 +40,9 @@ public class AddNewContactTests extends ApplicationManager {
     public void addNewContactPositiveTestValidateList(){
         Contact contact = ContactFactory.positiveContact();
         addPage.typeContactForm(contact);
+        //contactsPage.clickLastContact();
         Assert.assertTrue(contactsPage.isContactPresent(contact));
     }
+
+
 }
